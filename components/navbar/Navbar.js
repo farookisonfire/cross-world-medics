@@ -200,18 +200,18 @@ class Navbar extends Component {
 
           .nav-link-dark {
             border-radius: 4px;
-            color: white;
+            color: black;
             padding: 20px;
             text-decoration: none;
           }
 
           .nav-link-dark:visited {
-            color:white;
+            color: black;
           }
 
           .nav-link-dark:hover {
             border-radius: 4px;
-            color: white;
+            color: black;
           }
           .active {
             border-bottom: 2px solid red;
