@@ -2,13 +2,15 @@ import { Component } from 'react';
 import PageHeader from '../common/PageHeader';
 import LearnPageContent from './LearnPageContent';
 import LearnIcons from './LearnIcons';
+import FAQ from './FAQ';
 
 class LearnPage extends Component {
   render() {
     const {
       pageHeader,
       pageSubheader,
-      pageDescription
+      pageDescription,
+      faqs
     } = this.props.pageData;
     
     return (
@@ -24,6 +26,10 @@ class LearnPage extends Component {
         </div>
         <div>
           <LearnIcons />
+        </div>
+        <div className="faq-container">
+          <FAQ
+            faqs={faqs} />
         </div>
         <style jsx>{`
           .about-top {
