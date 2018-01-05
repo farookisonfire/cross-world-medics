@@ -108,11 +108,6 @@ class Navbar extends Component {
                 <a className={pageName === '/learn' ? 'nav-link-dark active' : 'nav-link-dark'}> Learn More </a>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link href="/donate">
-                <a className={pageName === '/donate' ? 'nav-link-dark active' : 'nav-link-dark'}> Donate </a>
-              </Link>
-            </li>
           </ul>
           <ul className="navbar-apply">
             <li>
