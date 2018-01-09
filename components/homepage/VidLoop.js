@@ -10,10 +10,10 @@ class VidLoop extends Component {
             autoPlay
             muted
             loop
-            poster="https://s3.amazonaws.com/health-corps-international/sample-homepage-still.png"
+            poster="https://s3.amazonaws.com/health-corps-international/CWM-poster.png"
             id="bgvid">
-            <source src="https://s3.amazonaws.com/health-corps-international/sample-homepage-video.webm" type="video/webm" />
-            <source src="https://s3.amazonaws.com/health-corps-international/sample-homepage-video.mp4" type="video/mp4" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-home-loop-video.webm" type="video/webm" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-home-loop-video.mp4" type="video/mp4" />
           </video>
           <div className="mobile-homepage" />
         </div>       
@@ -31,14 +31,14 @@ class VidLoop extends Component {
             -moz-transform: translateX(-50%) translateY(-50%);
             -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
-            background: url(https://s3.amazonaws.com/health-corps-international/sample-homepage-still.png) no-repeat;
+            background: url(https://s3.amazonaws.com/health-corps-international/CWM-poster.png) no-repeat;
             background-size: cover; 
           }
 
           .overlay {
             width: 100%;
             height: 100vh;
-            background-color: rgba(0,0,0,.2)
+            
           }
 
           .mobile-homepage {

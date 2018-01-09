@@ -47,6 +47,7 @@ export const mobileNavLink = {
   fontSize: '24px',
   lineHeight: 1.33,
   fontWeight: 300,
+  cursor: 'pointer'
 };
 
 export const mobileNavLinkLittle = {
