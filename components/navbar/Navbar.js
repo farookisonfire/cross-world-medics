@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Icon } from 'semantic-ui-react';
 import Transition from 'react-transition-group/Transition';
+import { typeformURL } from '../../lib/constants';
 import {
   mobileNavOpen,
   defaultStyle,
@@ -49,7 +50,7 @@ class Navbar extends Component {
     const MobileNavOpen = (
       <div className="mobile-nav-open" style={mobileNavOpen}>
         <a href="/">
-          <img alt="heart" className="nav-logo" style={mobileNavOpenLogo} src="https://s3.amazonaws.com/minimal-spaces/heart-with-words-horizontal-white-small_9_3_17.png" />
+          <img alt="heart" className="nav-logo" style={mobileNavOpenLogo} src="https://s3.amazonaws.com/health-corps-international/CWM.png" />
         </a>
         <div className="mobile-nav-close-icon" style={mobileNavCloseIcon}>
           {NavIconWhite}
@@ -57,7 +58,7 @@ class Navbar extends Component {
         <div className="mobile-nav-content">
           <ul style={mobileNavLinks}>
             <li style={mobileNavLinkContainer}>
-              <Link href="/admissions"><a style={mobileNavLink}>Admissions</a></Link>
+              <Link href="/admissions"><p style={mobileNavLink}>Admissions</p></Link>
             </li>
             <li style={mobileNavLinkContainer}>
               <Link href="/learn"><a style={mobileNavLink}>Learn More</a></Link>
@@ -66,7 +67,7 @@ class Navbar extends Component {
               <Link href="/donate"><a style={mobileNavLink}>Donate</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
-              <a style={mobileNavLink} href="https://oneheartsource.typeform.com/to/tU0wcN?refcode=webhome">Apply Now</a>
+              <a style={mobileNavLink} onClick={() => window.open(`${typeformURL}webhome`, '_blank')}>Apply Now</a>
             </li>
             <li style={mobileNavLinkContainer}>
               <Link href="/contact"><a style={mobileNavLink}>Contact</a></Link>
@@ -95,7 +96,7 @@ class Navbar extends Component {
       <div className={isHome ? 'navbar' : 'navbar-dark'}>
         <div className="navbar-elements">
           <a href="/">
-            <img alt="heart" className="nav-logo" src="https://s3.amazonaws.com/health-corps-international/cross-world-medics-logo1.png" />
+            <img alt="heart" className="nav-logo" src="https://s3.amazonaws.com/health-corps-international/CWM.png" />
           </a>
           <ul className="nav-items">
             <li className="nav-item">
@@ -111,13 +112,13 @@ class Navbar extends Component {
           </ul>
           <ul className="navbar-apply">
             <li>
-              <a href="https://oneheartsource.typeform.com/to/tU0wcN?refcode=webhome" className="navbar-apply-now">Apply Now</a>
+              <p onClick={() => window.open(`${typeformURL}webhome`, '_blank')} className="navbar-apply-now">Apply Now</p>
             </li>
           </ul>
         </div>
         <div className="navbar-mobile">
           <a href="/">
-            <img alt="heart" className="nav-logo-mobile" src="https://s3.amazonaws.com/minimal-spaces/heart-with-words-horizontal-white-small_9_3_17.png" />
+            <img alt="heart" className="nav-logo-mobile" src="https://s3.amazonaws.com/health-corps-international/CWM.png" />
           </a>
           <div className="mobile-nav-icon">
             { NavIconWhite }
@@ -144,12 +145,14 @@ class Navbar extends Component {
           }
 
           .navbar-dark {
-            background-color: rgb(255,255,255);
+            background-color: rgba(255,255,255,.75);
             margin-top: 0;
             position: absolute;
             padding-top: 5px;
             width: 100%;
             top: 0;
+            height: 60px;
+            border-bottom: 1px solid rgba(50,50,50,.3);
           }
 
           .navbar-elements {
@@ -159,14 +162,16 @@ class Navbar extends Component {
           }
 
           .nav-logo {
-            width: 300px;
+            width: 200px;
+            position: absolute;
+            top: -18px;
           }
 
           .nav-items {
             list-style: none;
-            display: inline-block;
-            margin: 0;
-            transform: translateY(-100%);
+            position: absolute;
+            left: 230px;
+            top: 9px;
           }
 
           .nav-link {
@@ -214,9 +219,8 @@ class Navbar extends Component {
           .navbar-apply {
             display: inline-block;
             list-style: none;
-            transform: translateY(-100%);
             position: absolute;
-            top: 21px;
+            top: -9px;
             right: 5%;
           }
           .navbar-apply-now {
@@ -224,7 +228,7 @@ class Navbar extends Component {
             padding: 15px 20px;
             color: white;
             cursor: pointer;
-            background: rgb(250,95,91);
+            background: rgb(0,196,204);
           }
 
           .navbar-mobile {
@@ -247,6 +251,8 @@ class Navbar extends Component {
             .nav-logo-mobile {
               margin-left: 15px;
               width: 150px;
+              position: absolute;
+              top: -10px;
             }
 
             .mobile-nav-icon {
@@ -278,9 +284,5 @@ class Navbar extends Component {
     );
   }
 }
-
-Navbar.propTypes = {
-  pageName: PropTypes.string,
-};
 
 export default Navbar;

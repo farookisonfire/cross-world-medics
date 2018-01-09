@@ -1,12 +1,17 @@
+import { Component } from 'react';
 import Head from './Head';
 import Navbar from '../navbar/Navbar';
 
-const Layout = props => (
-  <div>
-    <Head />
-    <Navbar />
-    {props.children}
-  </div>
-);
+class Layout extends Component {
+  render() {
+    return (
+      <div>
+        <Head />
+        <Navbar />
+        {this.props.children}
+      </div>
+    )
+  }
+}
 
 export default Layout;
