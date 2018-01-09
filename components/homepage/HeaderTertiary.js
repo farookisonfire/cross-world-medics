@@ -48,8 +48,11 @@ const HeaderTertiary = (props) => {
 
         @media (max-width: 768px) {
           .header-tertiary {
-            top: 45%;
+            top: 55%;
             color: black;
+          }
+          .header-cta-button {
+            font-size: 22px;
           }
         }
       `}</style>
