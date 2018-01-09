@@ -49,11 +49,17 @@ class Navbar extends Component {
 
     const MobileNavOpen = (
       <div className="mobile-nav-open" style={mobileNavOpen}>
-        <a href="/">
-          <img alt="heart" className="nav-logo" style={mobileNavOpenLogo} src="https://s3.amazonaws.com/health-corps-international/CWM.png" />
-        </a>
-        <div className="mobile-nav-close-icon" style={mobileNavCloseIcon}>
-          {NavIconWhite}
+        <div style={{
+          backgroundColor: 'rgba(200,200,200,.7)',
+          height: 60,
+          borderBottom: '1px solid rgba(250,250,250,.3)'
+        }}>
+          <a href="/">
+            <img alt="heart" className="nav-logo" style={mobileNavOpenLogo} src="https://s3.amazonaws.com/health-corps-international/CWM.png" />
+          </a>
+          <div className="mobile-nav-close-icon" style={mobileNavCloseIcon}>
+            {NavIconWhite}
+          </div>
         </div>
         <div className="mobile-nav-content">
           <ul style={mobileNavLinks}>
@@ -64,22 +70,7 @@ class Navbar extends Component {
               <Link href="/learn"><a style={mobileNavLink}>Learn More</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
-              <Link href="/donate"><a style={mobileNavLink}>Donate</a></Link>
-            </li>
-            <li style={mobileNavLinkContainer}>
               <a style={mobileNavLink} onClick={() => window.open(`${typeformURL}webhome`, '_blank')}>Apply Now</a>
-            </li>
-            <li style={mobileNavLinkContainer}>
-              <Link href="/contact"><a style={mobileNavLink}>Contact</a></Link>
-            </li>
-            <li style={mobileNavLinkLittleContainer}>
-              <a style={mobileNavLinkLittle} href="https://www.facebook.com/oneheartsource/">Facebook</a>
-            </li>
-            <li style={mobileNavLinkLittleContainer}>
-              <a style={mobileNavLinkLittle} href="https://www.instagram.com/oneheartsource/">Instagram</a>
-            </li>
-            <li style={mobileNavLinkLittleContainer}>
-              <a style={mobileNavLinkLittle} href="https://twitter.com/oneheartsource?lang=en">Twitter</a>
             </li>
           </ul>
         </div>
@@ -252,13 +243,13 @@ class Navbar extends Component {
               margin-left: 15px;
               width: 150px;
               position: absolute;
-              top: -10px;
+              top: -6px;
             }
 
             .mobile-nav-icon {
               position: absolute;
               right: 15px;
-              top: 10.5px;
+              top: 15px;
               cursor: pointer;
             }
 
@@ -274,7 +265,7 @@ class Navbar extends Component {
             .mobile-nav-close-icon {
               position: absolute;
               right: 15px;
-              top: 15px;
+              top: 33px;
               cursor: pointer;
               z-index: 2;
             }

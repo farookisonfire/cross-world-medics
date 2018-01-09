@@ -9,7 +9,6 @@ const HeaderSecondary = () => (
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
-        z-index: 1;
         color: white;
       }
 
@@ -28,6 +27,7 @@ const HeaderSecondary = () => (
         .header-secondary-title {
           font-size: 30px;
           font-weight: 500;
+          margin: 16px;
         }
       }
     `}</style>

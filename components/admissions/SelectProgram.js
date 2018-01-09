@@ -54,6 +54,12 @@ const SelectProgram = (props) => {
           background-color: rgba(0,196,204,.8);
           color: white;
         }
+        @media (max-width: 768px) {
+          .select-program-btn {
+            width: 100%;
+            padding: 10px;
+          }
+        }
       `}</style>
     </div>
   )

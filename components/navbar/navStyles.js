@@ -31,7 +31,6 @@ export const mobileNavCloseIcon = {
 
 export const mobileNavOpenLogo = {
   marginLeft: '15px',
-  marginTop: '10px',
   width: '150px',
 };
 
