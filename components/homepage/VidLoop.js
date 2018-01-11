@@ -10,10 +10,10 @@ class VidLoop extends Component {
             autoPlay
             muted
             loop
-            poster="https://s3.amazonaws.com/health-corps-international/CWM-poster.png"
+            poster="https://s3.amazonaws.com/health-corps-international/CWM-poster-720-medium-v1.png"
             id="bgvid">
-            <source src="https://s3.amazonaws.com/health-corps-international/CWM-home-loop-video.webm" type="video/webm" />
-            <source src="https://s3.amazonaws.com/health-corps-international/CWM-home-loop-video.mp4" type="video/mp4" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v1.webm" type="video/webm" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v1.mp4" type="video/mp4" />
           </video>
           <div className="mobile-homepage" />
         </div>       
@@ -31,7 +31,7 @@ class VidLoop extends Component {
             -moz-transform: translateX(-50%) translateY(-50%);
             -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
-            background: url(https://s3.amazonaws.com/health-corps-international/CWM-poster.png) no-repeat;
+            background: url(https://s3.amazonaws.com/health-corps-international/CWM-poster-720-medium-v1.png) no-repeat;
             background-size: cover; 
           }
 
@@ -52,7 +52,7 @@ class VidLoop extends Component {
 
             .mobile-homepage {
               display: block;
-              background-image: url('https://s3.amazonaws.com/minimal-spaces/cape-sunset.jpeg');
+              background-image: url('https://s3.amazonaws.com/health-corps-international/CWM-poster-720-medium-v1.png');
               background-size: cover;
               background-position: center;
               height: 100vh;
