@@ -1,5 +1,9 @@
 import { Component } from 'react';
 import PageHeader from '../common/PageHeader';
+import DashboardApplied from './DashboardApplied';
+import DashboardAccepted from './DashboardAccepted';
+import DashboardEnrolled from './DashboardEnrolled';
+import { USER_STATUS } from '../../lib/constants';
 
 class DashboardPage extends Component {
   constructor(props) {
@@ -9,12 +13,68 @@ class DashboardPage extends Component {
 
   }
 
+  componentDidMount() {
+    this.props.getPrograms();
+  }
+
   render() {
+    const {
+      programs,
+      isProgramSelected,
+      selectedProgramId,
+      closePaymentPortal,
+      handleEnrollClick,
+      handleWaitlistClick,
+      enrollType,
+      userData,
+      updateUserData
+    } = this.props;
+
     const { activeIndex } = this.state;
+    const { status } = userData;
 
     const pageHeader = 'My Dashboard'
     const pageSubheader = 'Page Subheader'
     const pageDescription = 'Page Description'
+
+    const resolveDashboardPageToRender = (userStatus) => {
+      const {
+        APPLIED,
+        ACCEPTED,
+        ENROLLED,
+        ENROLLED_WAITLIST,
+        CONFIRMED,
+        DENIED,
+        DEFERRED
+      } = USER_STATUS
+      
+      switch(userStatus) {
+        case APPLIED: return (
+          <DashboardApplied />
+        );
+        case ACCEPTED: return (
+          <DashboardAccepted
+            userData={userData}
+            programs={programs}
+            selectedProgramId={selectedProgramId}
+            isProgramSelected={isProgramSelected}
+            enrollType={enrollType}
+            closePaymentPortal={closePaymentPortal}
+            handleEnrollClick={handleEnrollClick}
+            handleWaitlistClick={handleWaitlistClick}
+            updateUserData={updateUserData}
+          />);
+        case ENROLLED: return (
+          <DashboardEnrolled
+            userData={userData}
+            programs={programs}
+          />
+        );
+        default: return <div></div>
+      }
+    }
+
+    const dashboardPageToRender = resolveDashboardPageToRender(status);
     
     return (
       <div>
@@ -25,10 +85,10 @@ class DashboardPage extends Component {
             pageDescription={pageDescription} />
         </div>
         <div className="mid-section">
-          <div>CONTENT</div>
+          { dashboardPageToRender }
         </div>
         <div className="bottom-section">
-          <div>BOTTOM CONTENT</div>
+          <div></div>
         </div>
         <style jsx>{`
           .top-section {
@@ -39,7 +99,9 @@ class DashboardPage extends Component {
           }
 
           .mid-section {
-            width: 100%;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
             background-color: rgb(247,247,247);
           }
 

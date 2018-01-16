@@ -20,7 +20,7 @@ const DashboardAuth = (props) => {
     inputError,
     handleInputChange,
     handleInputSubmit,
-    handleKeyPress
+    handleKeyPress,
   } = props;
 
   return (
