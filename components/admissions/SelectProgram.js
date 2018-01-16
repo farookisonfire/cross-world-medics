@@ -10,14 +10,6 @@ const SelectProgram = (props) => {
     <div>
       <div>
         <button
-          onClick={() => handleSelectProgram('surgical')}
-          className={selectedProgram === 'surgical' ?
-            "select-program-btn selected" :
-            "select-program-btn"
-        }>
-          Surgical
-        </button>
-        <button
           onClick={() => handleSelectProgram('medical')}
           className={selectedProgram === 'medical' ?
             "select-program-btn selected" :
@@ -44,7 +36,7 @@ const SelectProgram = (props) => {
       </div>
       <style jsx>{`
         .select-program-btn {
-          width: 20%;
+          width: 25%;
           padding: 20px;
           background-color: rgba(50,50,50,.8);
           color: white;

@@ -11,7 +11,7 @@ class AdmissionsPage extends Component {
     super(props);
 
     this.state = {
-      selectedProgram: 'surgical'
+      selectedProgram: 'medical'
     }
 
     this.handleSelectProgram = this.handleSelectProgram.bind(this);
