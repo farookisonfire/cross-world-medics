@@ -12,8 +12,8 @@ class VidLoop extends Component {
             loop
             poster="https://s3.amazonaws.com/health-corps-international/CWM-poster-720-medium-v1.png"
             id="bgvid">
-            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v1.webm" type="video/webm" />
-            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v1.mp4" type="video/mp4" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v2.webm" type="video/webm" />
+            <source src="https://s3.amazonaws.com/health-corps-international/CWM-loop-720-medium-v2.mp4" type="video/mp4" />
           </video>
           <div className="mobile-homepage" />
         </div>       

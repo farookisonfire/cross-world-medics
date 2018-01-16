@@ -19,7 +19,6 @@ const SelectProgramOverlay = (props) => {
             onClick={handleOverlayClose}
           />
           <div className="programs-container">
-            <Link href="/admissions#surgical"><a>SURGICAL</a></Link>
             <Link href="/admissions#medical"><a>MEDICAL</a></Link>
             <Link href="/admissions#nursing"><a>NURSING</a></Link>
             <Link href="/admissions#midwifery"><a>MIDWIFERY</a></Link>
