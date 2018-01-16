@@ -17,8 +17,10 @@ const DashboardAuth = (props) => {
 
   const {
     inputText,
+    inputError,
     handleInputChange,
-    handleInputSubmit
+    handleInputSubmit,
+    handleKeyPress
   } = props;
 
   return (
@@ -27,9 +29,11 @@ const DashboardAuth = (props) => {
         <div className="auth-container">
           <p>Please enter your CWM-ID below</p>
           <Input
+            error={inputError}
             placeholder="CWM-ID"
             value={inputText}
             onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
           />
           <Button
             style={btnStyle}
@@ -37,6 +41,7 @@ const DashboardAuth = (props) => {
             onClick={handleInputSubmit}>
             Go
           </Button>
+          {inputError && <p className="auth-error">The CWM-ID is invalid.</p>}
         </div>
       </div>
       <style jsx>{`
@@ -63,6 +68,12 @@ const DashboardAuth = (props) => {
           border-top-right-radius: 0.285714rem; 
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0.285714rem;
+        }
+
+        .auth-error {
+          font-size: 10px;
+          color: rgba(250,40,40,.8);
+          margin-top: 8px;
         }
       `}</style>
     </div>

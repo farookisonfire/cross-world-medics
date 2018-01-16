@@ -11,39 +11,50 @@ class Dashboard extends Component {
 
     this.state ={
       inputText: '',
-      userData: undefined
+      inputError: false,
+      userData: undefined,
     }
     
     this.handleInputChange=this.handleInputChange.bind(this);
     this.handleInputSubmit = this.handleInputSubmit.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleInputChange(e, data) {
     const inputText = data.value;
-    this.setState({inputText});
+    this.setState({ inputText, inputError: false });
   }
 
   handleInputSubmit() {
     const { inputText } = this.state;
     fetchUserData(inputText)
       .then(userData => {
-        if (userData) {
-          this.setState({userData});
-        }
+        if (userData) return this.setState({userData});
+        else return this.setState({ inputError: true })
       });
-    console.log('submit -->', inputText);
+  }
+
+  handleKeyPress(e) {
+    if(e.key === 'Enter') this.handleInputSubmit();
   }
 
   render() {
     console.log('Dashboard Component State ---->', this.state)
-    const { inputText, userData } = this.state;
+    const {
+      inputText,
+      inputError,
+      userData,
+    } = this.state;
 
     const DashboardPageToRender = userData ?
-      (<DashboardPage userData={userData}/>) :
+      (<DashboardPage
+        userData={userData}/>) :
       (<DashboardAuth
         handleInputChange={this.handleInputChange}
         handleInputSubmit={this.handleInputSubmit}
+        handleKeyPress={this.handleKeyPress}
         inputText={inputText}
+        inputError={inputError}
       />);
 
     return(
