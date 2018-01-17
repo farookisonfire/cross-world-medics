@@ -1,5 +1,11 @@
 import React from 'react';
 import { Table } from 'semantic-ui-react';
+import { programFees } from '../../lib/constants';
+
+const {
+  oneWeek,
+  twoWeek
+} = programFees;
 
 const ProgramCostTable = ({ selectedProgram }) => {
 
@@ -27,11 +33,11 @@ const ProgramCostTable = ({ selectedProgram }) => {
           <Table.Body>
             <Table.Row>
               <Table.Cell>1 Week</Table.Cell>
-              <Table.Cell>$2200</Table.Cell>
+              <Table.Cell>${oneWeek}</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>2 Week</Table.Cell>
-              <Table.Cell>$3600</Table.Cell>
+              <Table.Cell>${twoWeek}</Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>

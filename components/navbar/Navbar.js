@@ -70,6 +70,9 @@ class Navbar extends Component {
               <Link href="/learn"><a style={mobileNavLink}>Learn More</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
+              <Link href="/experience"><a style={mobileNavLink}>The Experiencee</a></Link>
+            </li>
+            <li style={mobileNavLinkContainer}>
               <a style={mobileNavLink} onClick={() => window.open(`${typeformURL}webhome`, '_blank')}>Apply Now</a>
             </li>
           </ul>
@@ -98,6 +101,11 @@ class Navbar extends Component {
             <li className="nav-item">
               <Link href="/learn">
                 <a className={pageName === '/learn' ? 'nav-link-dark active' : 'nav-link-dark'}> Learn More </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/experience">
+                <a className={pageName === '/experience' ? 'nav-link-dark active' : 'nav-link-dark'}> The Experience </a>
               </Link>
             </li>
           </ul>
