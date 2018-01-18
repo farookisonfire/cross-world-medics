@@ -1,5 +1,6 @@
 import PageHeader from '../common/PageHeader';
 import ExperienceSection from './ExperienceSection';
+import ExperiencePageContent from './ExperiencePageContent';
 
 const ExperiencePage = (props) => {
   const { pageData } = props;
@@ -23,7 +24,7 @@ const ExperiencePage = (props) => {
         />
       </div>
       <div className="mid-section">
-        { experienceSections }
+        <ExperiencePageContent />
       </div>
       <style jsx>{`
         .top-section {
