@@ -1,13 +1,8 @@
 import { Component } from 'react';
 import Layout from '../components/common/Layout';
 import ExperiencePage from '../components/experience/ExperiencePage';
-import { experiencePageData } from '../lib/constants';
 
-const pageData = {
-  pageHeader: 'The Experience'
-};
-
-pageData.sections = experiencePageData;
+const pageData = { pageHeader: 'The Experience' };
 
 class Experience extends Component {
   render() {
