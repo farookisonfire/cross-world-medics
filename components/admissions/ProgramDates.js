@@ -50,7 +50,7 @@ function makeTable(programDates, header) {
   );
 }
 
-const ProgramDates = ({ selectedProgram = 'surgical' }) => {
+const ProgramDates = ({ selectedProgram = 'medical' }) => {
   const oneWeek = sortByLength(programDates, '1 week', selectedProgram);
   const twoWeek = sortByLength(programDates, '2 week', selectedProgram);
 
@@ -59,7 +59,6 @@ const ProgramDates = ({ selectedProgram = 'surgical' }) => {
       <div className="program-dates-header" id="dates">
         <h1>Dates</h1>
         <p className="program-dates-subheader">We are currently accepting applications for 2018. Positions are limited, apply today!</p>
-        { programDates.length ? <p className="table-legend">· Program Full</p> : null}
       </div>
       <div className="program-dates-table" style={{ textAlign: 'center' }}>
         {oneWeek.length ? makeTable(oneWeek, '1 week') : null}
