@@ -3,7 +3,7 @@ const HeaderTertiary = (props) => {
   
   return (
     <div className="header-tertiary">
-      <h1 className="header-tertiary-title">1-6 WEEKS</h1>
+      <h1 className="header-tertiary-title">1-8 WEEKS</h1>
       <button 
         onClick={handleOverlayOpen}
         className="header-cta-button">Choose Your Program
