@@ -217,7 +217,7 @@ class Navbar extends Component {
 
           .nav-link-dark:hover {
             border-radius: 4px;
-            color: black;
+            color: rgba(0,196,204,1);
           }
           .active {
             border-bottom: 2px solid red;
