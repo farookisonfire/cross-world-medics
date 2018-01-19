@@ -70,7 +70,10 @@ class Navbar extends Component {
               <Link href="/learn"><a style={mobileNavLink}>Learn More</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
-              <Link href="/experience"><a style={mobileNavLink}>The Experiencee</a></Link>
+              <Link href="/experience"><a style={mobileNavLink}>The Experience</a></Link>
+            </li>
+            <li style={mobileNavLinkContainer}>
+              <Link href="/contact"><a style={mobileNavLink}>Contact</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
               <a style={mobileNavLink} onClick={() => window.open(`${typeformURL}webhome`, '_blank')}>Apply Now</a>
@@ -106,6 +109,11 @@ class Navbar extends Component {
             <li className="nav-item">
               <Link href="/experience">
                 <a className={pageName === '/experience' ? 'nav-link-dark active' : 'nav-link-dark'}> The Experience </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/contact">
+                <a className={pageName === '/contact' ? 'nav-link-dark active' : 'nav-link-dark'}>Contact </a>
               </Link>
             </li>
           </ul>
@@ -155,9 +163,7 @@ class Navbar extends Component {
           }
 
           .navbar-elements {
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
+            margin-left: 40px;
           }
 
           .nav-logo {
@@ -167,15 +173,16 @@ class Navbar extends Component {
           }
 
           .nav-items {
+            display: flex;
             list-style: none;
             position: absolute;
-            left: 230px;
+            left: 210px;
             top: 9px;
           }
 
           .nav-link {
             border-radius: 4px;
-            padding: 20px;
+            padding: 8px;
             text-decoration: none;
             transition-property: background-color, color;
             transition-duration: 1s, 1s;
@@ -194,13 +201,13 @@ class Navbar extends Component {
           }
 
           .nav-item {
-            display: inline-block;
+
           }
 
           .nav-link-dark {
             border-radius: 4px;
             color: black;
-            padding: 20px;
+            padding: 8px;
             text-decoration: none;
           }
 
