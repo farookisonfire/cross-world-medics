@@ -73,6 +73,9 @@ class Navbar extends Component {
               <Link href="/experience"><a style={mobileNavLink}>The Experience</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
+              <Link href="/donate"><a style={mobileNavLink}>Donate</a></Link>
+            </li>
+            <li style={mobileNavLinkContainer}>
               <Link href="/contact"><a style={mobileNavLink}>Contact</a></Link>
             </li>
             <li style={mobileNavLinkContainer}>
@@ -109,6 +112,11 @@ class Navbar extends Component {
             <li className="nav-item">
               <Link href="/experience">
                 <a className={pageName === '/experience' ? 'nav-link-dark active' : 'nav-link-dark'}> The Experience </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/donate">
+                <a className={pageName === '/donate' ? 'nav-link-dark active' : 'nav-link-dark'}>Donate </a>
               </Link>
             </li>
             <li className="nav-item">
