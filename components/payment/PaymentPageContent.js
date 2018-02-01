@@ -1,23 +1,23 @@
-import DonateHeader from './DonateHeader';
+import PaymentHeader from './PaymentHeader';
 import CheckoutForm from './CheckoutForm';
 
-const DonatePage = () => (
+const PaymentPage = () => (
   <div>
-    <div className="donate-top">
-      <DonateHeader />
+    <div className="payment-top">
+      <PaymentHeader />
     </div>
-    <div className="donate-form-container">
+    <div className="payment-form-container">
       <CheckoutForm />
     </div>
     <style jsx>{`
-      .donate-top {
+      .payment-top {
         width: 85%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 100px;
       }
 
-      .donate-form-container {
+      .payment-form-container {
         background-color: rgb(238,238,238)
         width: 100%;
         padding: 40px;
@@ -27,4 +27,4 @@ const DonatePage = () => (
   </div>
 )
 
-export default DonatePage;
+export default PaymentPage;
