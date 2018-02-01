@@ -6,7 +6,7 @@ module.exports = {
       '/learn': { page: '/learn' },
       '/my-dashboard': { page: '/my-dashboard' },
       '/experience': { page: '/experience' },
-      '/donate': { page: '/donate' },
+      '/payment': { page: '/payment' },
     }
   }
 }

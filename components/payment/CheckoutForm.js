@@ -94,7 +94,7 @@ class StripeJS extends Component {
       const customerDetails = this.state.customerDetails;
       const payload = JSON.stringify({ customerDetails, token: result.token.id });
       this.clearDonationForm();
-      fetch(`${SERVER_URL}/checkout/donate`, {
+      fetch(`${SERVER_URL}/checkout/payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: payload,
@@ -264,13 +264,13 @@ class StripeJS extends Component {
           <Checkbox
             onChange={this.handleNonRefundableCheck}
             style={{color: 'rgba(50,50,50,.7)'}}
-            label='I understand that all donations are considered final and non-refundable.' />
+            label='I understand that all payments are considered final and non-refundable.' />
         </div>
         <button
           onClick={this.handleSubmit}
           className={this.state.enablePaymentButton ? 'button-enabled': 'button-disabled'}
           disabled={!this.state.enablePaymentButton}
-          type="submit">DONATE NOW</button>
+          type="submit">Submit Payment</button>
         <div className="outcome">
           <div className="error" role="alert"></div>
           <div>
