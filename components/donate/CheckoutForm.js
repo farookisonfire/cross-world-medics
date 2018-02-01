@@ -3,6 +3,8 @@ import scriptLoader from 'react-async-script-loader';
 import { Message } from 'semantic-ui-react';
 import 'whatwg-fetch';
 import { FadingCircle } from 'better-react-spinkit';
+
+import { Checkbox } from 'semantic-ui-react'
 import { STRIPE_PUBLISHABLE, SERVER_URL } from '../../lib/constants';
 
 class StripeJS extends Component {
@@ -25,6 +27,7 @@ class StripeJS extends Component {
         amount: true,
       },
       showDonationSpinner: false,
+      enablePaymentButton: false
     };
 
     this.stripe;
@@ -63,6 +66,7 @@ class StripeJS extends Component {
     this.clearDonationForm = this.clearDonationForm.bind(this);
     this.showDonationModal = this.showDonationModal.bind(this);
     this.hideDonationModal = this.hideDonationModal.bind(this);
+    this.handleNonRefundableCheck = this.handleNonRefundableCheck.bind(this);
   }
 
   componentDidMount() {
@@ -188,10 +192,15 @@ class StripeJS extends Component {
     this.setState({ customerDetails });
   }
 
-  render() {    
+  handleNonRefundableCheck(e, data) {
+    const { checked } = data;
+    this.setState({ enablePaymentButton: checked });
+  }
+
+  render() {
     const { valid } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <div className="group">
           <label>
             <span>Name</span>
@@ -248,10 +257,20 @@ class StripeJS extends Component {
         <div className="group">
           <label>
             <span>Card</span>
-            <div id="card-element" className="field"></div>
+            <div id="card-element" className="field" />
           </label>
         </div>
-        <button type="submit">DONATE NOW</button>
+        <div className="non-refundable-checkbox">
+          <Checkbox
+            onChange={this.handleNonRefundableCheck}
+            style={{color: 'rgba(50,50,50,.7)'}}
+            label='I understand that all donations are considered final and non-refundable.' />
+        </div>
+        <button
+          onClick={this.handleSubmit}
+          className={this.state.enablePaymentButton ? 'button-enabled': 'button-disabled'}
+          disabled={!this.state.enablePaymentButton}
+          type="submit">DONATE NOW</button>
         <div className="outcome">
           <div className="error" role="alert"></div>
           <div>
@@ -345,7 +364,7 @@ class StripeJS extends Component {
             .field::-moz-placeholder { color: #CFD7E0; }
             .field:-ms-input-placeholder { color: #CFD7E0; }
 
-            button {
+            .button-enabled {
               float: left;
               display: block;
               background: rgba(0,196,204,1);
@@ -363,11 +382,30 @@ class StripeJS extends Component {
               outline: none;
             }
 
-            button:focus {
+            .button-disabled {
+              float: left;
+              display: block;
+              background: rgba(80,80,80,.7);
+              color: white;
+              box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10),
+                          0 3px 6px 0 rgba(0,0,0,0.08);
+              border-radius: 4px;
+              border: 0;
+              margin-top: 20px;
+              font-size: 15px;
+              font-weight: 400;
+              width: 100%;
+              height: 40px;
+              line-height: 38px;
+              outline: none;
+              cursor: not-allowed;
+            }
+
+            .button-enabled:focus {
               background: rgba(0,196,204,1);
             }
 
-            button:active {
+            .button-enabled:active {
               background: rgba(0,196,204,1);
             }
 
@@ -439,6 +477,10 @@ class StripeJS extends Component {
               position: relative;
               left: 50%;
               transform: translateX(-25px);
+            }
+
+            .non-refundable-checkbox {
+              text-align: center;
             }
 
             @media (max-width: 768px) {
