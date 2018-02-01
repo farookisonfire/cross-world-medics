@@ -257,7 +257,7 @@ class StripeJS extends Component {
         <div className="group">
           <label>
             <span>Card</span>
-            <div id="card-element" className="field"></div>
+            <div id="card-element" className="field" />
           </label>
         </div>
         <div className="non-refundable-checkbox">
