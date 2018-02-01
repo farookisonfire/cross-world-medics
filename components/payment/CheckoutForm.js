@@ -284,7 +284,7 @@ class StripeJS extends Component {
         {this.state.showDonationSpinner && (
           <div className="donation-loading-overlay">
             <div className="donation-loading-spinner">
-              <p>Donation Processing...</p>
+              <p>Payment Processing...</p>
               <div className="fading-circle-container">
                 <FadingCircle
                   size={50}
