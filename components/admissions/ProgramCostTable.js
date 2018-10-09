@@ -26,7 +26,6 @@ const ProgramCostTable = ({ selectedProgram }) => {
     <div>
       <div className="program-cost-header" id="cost">
         <h1>Program Fee</h1>
-        <p>Tax deductible up to 88% for US residents, the program fee is not refundable. Members have the option making a single payment upon acceptance, or several monthly payments while fundraising.</p>
       </div>
       <div className="program-cost-table">
         <Table textAlign="center" columns={3} basic="very" size="small">

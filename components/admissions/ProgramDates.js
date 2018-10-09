@@ -1,5 +1,7 @@
 import React from 'react';
 import { Table } from 'semantic-ui-react';
+import ProgramDatesDesktop from './ProgramDatesDesktop';
+import ProgramDatesMobile from './ProgramDatesMobile';
 import { programDates } from '../../lib/constants';
 
 const sortByLength = (programs, length, selectedProgram) => {
@@ -58,17 +60,18 @@ const ProgramDates = ({ selectedProgram = 'medical' }) => {
     <div>
       <div className="program-dates-header" id="dates">
         <h1>Dates</h1>
-        <p className="program-dates-subheader">We are currently accepting applications for 2018. Positions are limited, apply today!</p>
+        <p className="program-dates-subheader">We are currently accepting applications for 2019. Positions are limited, apply today!</p>
       </div>
-      <div className="program-dates-table" style={{ textAlign: 'center' }}>
-        {oneWeek.length ? makeTable(oneWeek, '1 week') : null}
-        {twoWeek.length ? makeTable(twoWeek, '2 week') : null}
+      <div className='program-dates-table program-dates-table-mobile'>
+        <ProgramDatesMobile />
+      </div>
+      <div className='program-dates-table program-dates-table-desktop'>
+        <ProgramDatesDesktop />
       </div>
       <style jsx>{`
         .program-dates-table {
-          margin-left: auto;
-          margin-right: auto;
-          width: 70%;
+          display: flex;
+          justify-content: center;
         }
 
         .program-dates-header {
@@ -98,7 +101,18 @@ const ProgramDates = ({ selectedProgram = 'medical' }) => {
           font-style: italic;
         }
 
-         @media (max-width: 768px) {
+        .program-dates-table-mobile {
+          display: none;
+        }
+        @media (max-width: 768px) {
+          .program-dates-table-desktop {
+             display: none;
+           }
+
+          .program-dates-table-mobile {
+             display: block;
+           }
+
            .program-dates-header h1 {
               font-size: 30px;
             }

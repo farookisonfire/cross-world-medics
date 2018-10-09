@@ -21,8 +21,6 @@ const SelectProgramOverlay = (props) => {
           <div className="programs-container">
             <Link href="/admissions#medical"><a>MEDICAL</a></Link>
             <Link href="/admissions#nursing"><a>NURSING</a></Link>
-            <Link href="/admissions#midwifery"><a>MIDWIFERY</a></Link>
-            <Link href="/admissions#veterinary"><a>VETERINARY</a></Link>
           </div>
           <style jsx>{`
           .select-program-overlay {
