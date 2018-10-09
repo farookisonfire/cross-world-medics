@@ -56,7 +56,7 @@ const ProgramDatesDesktop = () => (
         <Table.Cell />
         <Table.Cell />
         <Table.Cell />
-        <Table.Cell>July 1 - July 5th</Table.Cell>
+        <Table.Cell>July 1 - July 5</Table.Cell>
         <Table.Cell />
       </Table.Row>
       <Table.Row>
