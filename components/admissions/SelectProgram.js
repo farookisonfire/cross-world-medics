@@ -8,7 +8,7 @@ const SelectProgram = (props) => {
 
   return (
     <div>
-      <div>
+      <div className="btn-container">
         <button
           onClick={() => handleSelectProgram('medical')}
           className={selectedProgram === 'medical' ?
@@ -21,23 +21,16 @@ const SelectProgram = (props) => {
             "select-program-btn selected" :
             "select-program-btn"
         }>Nursing</button>
-        <button
-          onClick={() => handleSelectProgram('midwifery')}
-          className={selectedProgram === 'midwifery' ?
-            "select-program-btn selected" :
-            "select-program-btn"
-        }>Midwifery</button>
-        <button
-          onClick={() => handleSelectProgram('veterinary')}
-          className={selectedProgram === 'veterinary' ?
-            "select-program-btn selected" :
-            "select-program-btn"
-        }>Veterinary</button>
       </div>
       <style jsx>{`
+        .btn-container {
+          display: flex;
+          justify-content: center;
+        }
+        
         .select-program-btn {
           width: 25%;
-          padding: 20px;
+          padding: 16px;
           background-color: rgba(50,50,50,.8);
           color: white;
         }
