@@ -11,59 +11,44 @@ const ProgramDatesDesktop = () => (
     size='small'>
     <Table.Header>
       <Table.Row>
-        <Table.HeaderCell width='4' colSpan='2'>WINTER</Table.HeaderCell>
-        <Table.HeaderCell width='3' >SPRING</Table.HeaderCell>
-        <Table.HeaderCell width='4' colSpan='2'>SUMMER</Table.HeaderCell>
+        <Table.HeaderCell colSpan="1" >1 WEEK</Table.HeaderCell>
+        <Table.HeaderCell colSpan="1">2 WEEK</Table.HeaderCell>
+        <Table.HeaderCell colSpan="1">4 WEEK</Table.HeaderCell>
       </Table.Row>
       <Table.Row>
-        <Table.HeaderCell>1 week</Table.HeaderCell>
-        <Table.HeaderCell>2 week</Table.HeaderCell>
-        <Table.HeaderCell>Custom</Table.HeaderCell>
-        <Table.HeaderCell>1 week</Table.HeaderCell>
-        <Table.HeaderCell>2 week</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
       <Table.Row>
-        <Table.Cell>Jan 7 - Jan 11</Table.Cell>
-        <Table.Cell>Jan 7 - Jan 18</Table.Cell>
-        <Table.Cell>1-6 week programs are available. Please note your preferred dates in your application.</Table.Cell>
-        <Table.Cell>June 3 - June 7</Table.Cell>
-        <Table.Cell>May 27 - June 7</Table.Cell>
+        <Table.Cell>June 1 - June 5</Table.Cell>
+        <Table.Cell>June 1 - June 12</Table.Cell>
+        <Table.Cell>June 1 - June 26</Table.Cell>
       </Table.Row>
       <Table.Row>
-        <Table.Cell>Jan 14 - Jan 18</Table.Cell>
-        <Table.Cell>Jan 14 - Jan 25</Table.Cell>
-        <Table.Cell />
-        <Table.Cell>June 10 - June 14</Table.Cell>
-        <Table.Cell>June 10 - June 21</Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>Jan 21 - Jan 25</Table.Cell>
-        <Table.Cell />
-        <Table.Cell />
-        <Table.Cell>June 17 - June 21</Table.Cell>
-        <Table.Cell>June 24 - July 5</Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell />
-        <Table.Cell />
-        <Table.Cell />
-        <Table.Cell>June 24 - June 28</Table.Cell>
+        <Table.Cell>June 15 - June 19</Table.Cell>
+        <Table.Cell>June 15 - June 26</Table.Cell>
+        <Table.Cell>June 15 - June 26</Table.Cell>
         <Table.Cell />
       </Table.Row>
       <Table.Row>
+        <Table.Cell>July 6 - July 10 </Table.Cell>
+        <Table.Cell>July 6 - July 17 </Table.Cell>
+        <Table.Cell>July 6 - July 31</Table.Cell>
         <Table.Cell />
+      </Table.Row>
+      <Table.Row>
+      <Table.Cell>July 20 - July 24 </Table.Cell>
+      <Table.Cell>July 20 - July 31</Table.Cell>
         <Table.Cell />
-        <Table.Cell />
-        <Table.Cell>July 1 - July 5</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+      <Table.Cell>Aug 3 - Aug 7 </Table.Cell>
+      <Table.Cell>Aug 3 - Aug 14</Table.Cell>
         <Table.Cell />
       </Table.Row>
       <Table.Row>
         <Table.Cell />
         <Table.Cell />
-        <Table.Cell />
-        <Table.Cell>July 8 - July 12</Table.Cell>
         <Table.Cell />
       </Table.Row>
     </Table.Body>
