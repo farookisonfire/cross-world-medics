@@ -53,14 +53,14 @@ function makeTable(programDates, header) {
 }
 
 const ProgramDates = ({ selectedProgram = 'medical' }) => {
-  const oneWeek = sortByLength(programDates, '1 week', selectedProgram);
-  const twoWeek = sortByLength(programDates, '2 week', selectedProgram);
+  // const oneWeek = sortByLength(programDates, '1 week', selectedProgram);
+  // const twoWeek = sortByLength(programDates, '2 week', selectedProgram);
 
   return (
     <div>
       <div className="program-dates-header" id="dates">
         <h1>Dates</h1>
-        <p className="program-dates-subheader">We are currently accepting applications for 2019. Positions are limited, apply today!</p>
+        <p className="program-dates-subheader">We are currently accepting applications for 2020. Positions are limited, apply today!</p>
       </div>
       <div className='program-dates-table program-dates-table-mobile'>
         <ProgramDatesMobile />

@@ -4,7 +4,8 @@ import { programFees } from '../../lib/constants';
 
 const {
   oneWeek,
-  twoWeek
+  twoWeek,
+  fourWeek
 } = programFees;
 
 const ProgramCostTable = ({ selectedProgram }) => {
@@ -37,6 +38,10 @@ const ProgramCostTable = ({ selectedProgram }) => {
             <Table.Row>
               <Table.Cell>2 Week</Table.Cell>
               <Table.Cell>${twoWeek}</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>4 Week</Table.Cell>
+              <Table.Cell>${fourWeek}</Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>
